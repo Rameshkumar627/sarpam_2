@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Menu-->
+
+
+
+    <menuitem name="Stores" id="menu_store" sequence="40"/>
+    <menuitem name="Pharmacy" id="menu_pharmacy" sequence="50"/>
+    <menuitem name="Laboratory" id="menu_lab" sequence="60"/>
+    <menuitem name="Accounts" id="menu_accounts" sequence="10"/>
+
+
+    <!--Patient-->
+    <menuitem name="Patient" id="menu_patient" sequence="10"/>
+    <menuitem name="Out-Patient" id="hospital_out_patient" parent="menu_patient" sequence="10"/>
+    <menuitem name="Appointment" id="hospital_out_patient_appointment" parent="hospital_out_patient" sequence="10"/>
+    <menuitem name="OPT" id="hospital_out_patient_opt" parent="hospital_out_patient" sequence="20"/>
+    <menuitem name="Billing" id="hospital_out_patient_billing" parent="hospital_out_patient" sequence="30"/>
+    <menuitem name="Report" id="hospital_out_patient_report" parent="hospital_out_patient" sequence="40"/>
+
+    <menuitem name="In-Patient" id="hospital_in_patient" parent="menu_patient" sequence="20"/>
+    <menuitem name="Ambulance" id="hospital_in_patient_ambulance" parent="hospital_in_patient" sequence="10"/>
+    <menuitem name="Admission" id="hospital_in_patient_admission" parent="hospital_in_patient" sequence="20"/>
+    <menuitem name="IPT" id="hospital_in_patient_ipt" parent="hospital_in_patient" sequence="30"/>
+    <menuitem name="Treatment" id="hospital_in_patient_treatment" parent="hospital_in_patient" sequence="40"/>
+    <menuitem name="Operation Theater" id="hospital_in_patient_ot" parent="hospital_in_patient" sequence="50"/>
+    <menuitem name="Billing" id="hospital_in_patient_billing" parent="hospital_in_patient" sequence="60"/>
+    <menuitem name="Discharge" id="hospital_in_patient_discharge" parent="hospital_in_patient" sequence="70"/>
+    <menuitem name="Report" id="hospital_in_patient_report" parent="hospital_in_patient" sequence="80"/>
+
+    <menuitem name="Patient Details" id="hospital_patient_contact" parent="menu_patient" sequence="30"/>
+    <menuitem name="Medicine" id="hospital_patient_medicine" parent="menu_patient" sequence="40"/>
+
+
+    <!--Employee-->
+    <menuitem name="Employee" id="menu_employee" sequence="20"/>
+    <menuitem name="Contact" id="hospital_employee_contact" parent="menu_employee" sequence="10"/>
+    <menuitem name="Doctor" id="hospital_employee_contact_doctor" parent="hospital_employee_contact" sequence="10"/>
+    <menuitem name="Nurse" id="hospital_employee_contact_nurse" parent="hospital_employee_contact" sequence="20"/>
+    <menuitem name="Contract" id="hospital_employee_contact_contract" parent="hospital_employee_contact" sequence="30"/>
+    <menuitem name="Others" id="hospital_employee_contact_others" parent="hospital_employee_contact" sequence="40"/>
+
+    <menuitem name="Time Management" id="hospital_employee_time" parent="menu_employee" sequence="20"/>
+    <menuitem name="Time Schedule" id="hospital_employee_time_schedule" parent="hospital_employee_time" sequence="10"/>
+    <menuitem name="Time Sheet" id="hospital_employee_time_sheet" parent="hospital_employee_time" sequence="20"/>
+    <menuitem name="Attendance" id="hospital_employee_time_attendance" parent="hospital_employee_time" sequence="30"/>
+    <menuitem name="Report" id="hospital_employee_time_report" parent="hospital_employee_time" sequence="40"/>
+
+    <menuitem name="Leave management" id="hospital_employee_leave" parent="menu_employee" sequence="30"/>
+    <menuitem name="Leave Application" id="hospital_employee_leave_application" parent="hospital_employee_leave" sequence="10"/>
+    <menuitem name="Permission" id="hospital_employee_leave_permission" parent="hospital_employee_leave" sequence="20"/>
+    <menuitem name="Over-Time" id="hospital_employee_leave_over_time" parent="hospital_employee_leave" sequence="30"/>
+    <menuitem name="Leave Available" id="hospital_employee_leave_available" parent="hospital_employee_leave" sequence="40"/>
+    <menuitem name="Comp-Off" id="hospital_employee_leave_comp_off" parent="hospital_employee_leave" sequence="50"/>
+    <menuitem name="Report" id="hospital_employee_leave_report" parent="hospital_employee_leave" sequence="60"/>
+
+
+    <menuitem name="payroll" id="hospital_employee_payroll" parent="menu_employee" sequence="40"/>
+    <menuitem name="Pay Slip" id="hospital_employee_payroll_payslip" parent="hospital_employee_payroll" sequence="10"/>
+    <menuitem name="Pay Slip Generation" id="hospital_employee_payroll_payslip_generation" parent="hospital_employee_payroll" sequence="20"/>
+    <menuitem name="Salary Structure" id="hospital_employee_payroll_salary_structure" parent="hospital_employee_payroll" sequence="30"/>
+    <menuitem name="Salary Rule" id="hospital_employee_payroll_salary_rule" parent="hospital_employee_payroll" sequence="40"/>
+    <menuitem name="salary Details" id="hospital_employee_payroll_salary_details" parent="hospital_employee_payroll" sequence="50"/>
+    <menuitem name="Report" id="hospital_employee_payroll_report" parent="hospital_employee_payroll" sequence="60"/>
+
+
+    <menuitem name="Employee Enroll/Exit" id="hospital_employee_ee" parent="menu_employee" sequence="50"/>
+    <menuitem name="Enroll" id="hospital_employee_ee_enroll" parent="hospital_employee_ee" sequence="10"/>
+    <menuitem name="Exit" id="hospital_employee_ee_exit" parent="hospital_employee_ee" sequence="20"/>
+
+
+    <!--Hospital-->
+    <menuitem name="Hospital" id="menu_hospital" sequence="30"/>
+    <menuitem name="Contact" id="hospital_contact" parent="menu_hospital" sequence="10"/>
+    <menuitem name="Patient" id="hospital_contact_patient" parent="hospital_contact" sequence="10"/>
+    <menuitem name="Doctor" id="hospital_contact_doctor" parent="hospital_contact" sequence="10"/>
+    <menuitem name="Nurse" id="hospital_contact_nurse" parent="hospital_contact" sequence="20"/>
+    <menuitem name="Contract" id="hospital_contact_contract" parent="hospital_contact" sequence="30"/>
+    <menuitem name="Others" id="hospital_contact_others" parent="hospital_contact" sequence="40"/>
+
+
+    <menuitem name="Organisational Structure" id="hospital_organisational_structure" parent="menu_hospital" sequence="20"/>
+    <menuitem name="Department" id="hospital_department" parent="menu_hospital" sequence="30"/>
+    <menuitem name="Ward" id="hospital_ward" parent="menu_hospital" sequence="40"/>
+    <menuitem name="Operation Theater" id="hospital_operation_theater" parent="menu_hospital" sequence="50"/>
+
+    <menuitem name="Maintenance" id="hospital_maintenance" parent="menu_hospital" sequence="60"/>
+    <menuitem name="Equipement" id="hospital_maintenance_equipement" parent="hospital_maintenance" sequence="10"/>
+    <menuitem name="Others" id="hospital_maintenance_others" parent="hospital_maintenance" sequence="20"/>
+    <menuitem name="Notification" id="hospital_maintenance_notification" parent="hospital_maintenance" sequence="30"/>
+    <menuitem name="Todo's" id="hospital_maintenance_todos" parent="hospital_maintenance" sequence="40"/>
+
+    <menuitem name="Payment" id="hospital_payment" parent="menu_hospital" sequence="70"/>
+    <menuitem name="Voucher" id="hospital_payment_voucher" parent="hospital_payment" sequence="10"/>
+    <menuitem name="Expense" id="hospital_payment_expense" parent="hospital_payment" sequence="20"/>
+
+
+    <menuitem name="Billing" id="hospital_billing" parent="menu_hospital" sequence="80"/>
+
+
+    <!--Store-->
+    <menuitem name="Store" id="menu_store" sequence="40"/>
+    <menuitem name="Store Request" id="hospital_store_sr" parent="menu_store" sequence="10"/>
+    <menuitem name="Store Issue" id="hospital_store_si" parent="menu_store" sequence="20"/>
+    <menuitem name="Stock" id="hospital_store_stock" parent="menu_store" sequence="30"/>
+
+    <menuitem name="Product" id="hospital_store_product" parent="menu_store" sequence="40"/>
+    <menuitem name="Group" id="hospital_store_product_group" parent="hospital_store_product" sequence="10"/>
+    <menuitem name="Sub-Group" id="hospital_store_product_sub_group" parent="hospital_store_product" sequence="20"/>
+    <menuitem name="Product Type" id="hospital_store_product_type" parent="hospital_store_product" sequence="30"/>
+    <menuitem name="Product UOM" id="hospital_store_product_uom" parent="hospital_store_product" sequence="40"/>
+    <menuitem name="Product Tax" id="hospital_store_product_tax" parent="hospital_store_product" sequence="50"/>
+    <menuitem name="Product Sales Price" id="hospital_store_product_sales_price" parent="hospital_store_product" sequence="60"/>
+    <menuitem name="Product Purchase Price" id="hospital_store_product_purchase_price" parent="hospital_store_product" sequence="70"/>
+
+
+    <menuitem name="Purchase" id="hospital_store_purchase" parent="menu_store" sequence="50"/>
+
+    <!--Pharmacy-->
+    <menuitem name="Pharmacy" id="menu_pharmacy" sequence="50"/>
+    <menuitem name="Billing" id="hospital_pharmacy_billing" parent="menu_pharmacy" sequence="10"/>
+    <menuitem name="Stock" id="hospital_pharmacy_stock" parent="menu_pharmacy" sequence="20"/>
+    <menuitem name="Report" id="hospital_pharmacy_report" parent="menu_pharmacy" sequence="30"/>
+
+    <!--Laboratory-->
+    <menuitem name="Laboratory" id="menu_lab" sequence="60"/>
+    <menuitem name="Lab-Form" id="hospital_lab_form" parent="menu_lab" sequence="10"/>
+    <menuitem name="Lab-Test" id="hospital_lab_test" parent="menu_lab" sequence="20"/>
+    <menuitem name="Billing" id="hospital_lab_billing" parent="menu_lab" sequence="30"/>
+    <menuitem name="Report" id="hospital_lab_report" parent="menu_lab" sequence="40"/>
+
+
+    <!--Accounts-->
+    <menuitem name="Accounts" id="menu_accounts" sequence="70"/>
+    <menuitem name="Journal Entries" id="hospital_account_journal" parent="menu_accounts" sequence="10"/>
+    <menuitem name="Ledger" id="hospital_account_ledger" parent="menu_accounts" sequence="20"/>
+    <menuitem name="Trail Balance" id="hospital_trail_balance" parent="menu_accounts" sequence="30"/>
+    <menuitem name="Profit Loss" id="hospital_profit_loss" parent="menu_accounts" sequence="40"/>
+    <menuitem name="Bank Statement" id="hospital_bank_statement" parent="menu_accounts" sequence="50"/>
+
+
+</odoo>
