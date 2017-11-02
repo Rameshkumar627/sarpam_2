@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Contact-->
+    <menuitem name="Doctor"
+              id="hospital_employee_contact_doctor"
+              parent="hospital_employee_contact"
+              action="action_employee_employee_doctor"
+              sequence="10"/>
+    
+    <menuitem name="Nurse"
+              id="hospital_employee_contact_nurse"
+              parent="hospital_employee_contact"
+              action="action_employee_employee_nurse"
+              sequence="20"/>
+    
+    <menuitem name="Contract"
+              id="hospital_employee_contact_contract"
+              parent="hospital_employee_contact"
+              action="action_employee_employee_contract"
+              sequence="30"/>
+
+    <menuitem name="Others"
+              id="hospital_employee_contact_others"
+              parent="hospital_employee_contact"
+              action="action_employee_employee_others"
+              sequence="40"/>
+
+    <!--Time-->
+    <menuitem name="Time Schedule"
+              id="hospital_employee_time_schedule"
+              parent="hospital_employee_time"
+              sequence="10"/>
+    
+    <menuitem name="Time Sheet"
+              id="hospital_employee_time_sheet"
+              parent="hospital_employee_time"
+              sequence="20"/>
+    
+    <menuitem name="Attendance"
+              id="hospital_employee_time_attendance"
+              parent="hospital_employee_time"
+              sequence="30"/>
+
+    <menuitem name="Report"
+              id="hospital_employee_time_report"
+              parent="hospital_employee_time"
+              sequence="40"/>
+
+    <!--Leave-->
+    <menuitem name="Leave Application"
+              id="hospital_employee_leave_application"
+              parent="hospital_employee_leave"
+              sequence="10"/>
+
+    <menuitem name="Permission"
+              id="hospital_employee_leave_permission"
+              parent="hospital_employee_leave"
+              sequence="20"/>
+
+    <menuitem name="Over-Time"
+              id="hospital_employee_leave_over_time"
+              parent="hospital_employee_leave"
+              sequence="30"/>
+
+    <menuitem name="Leave Available"
+              id="hospital_employee_leave_available"
+              parent="hospital_employee_leave"
+              sequence="40"/>
+
+    <menuitem name="Comp-Off"
+              id="hospital_employee_leave_comp_off"
+              parent="hospital_employee_leave"
+              sequence="50"/>
+
+    <menuitem name="Report"
+              id="hospital_employee_leave_report"
+              parent="hospital_employee_leave"
+              sequence="60"/>
+
+    <!--Payroll-->
+    <menuitem name="Pay Slip"
+              id="hospital_employee_payroll_payslip"
+              parent="hospital_employee_payroll"
+              sequence="10"/>
+
+    <menuitem name="Pay Slip Generation"
+              id="hospital_employee_payroll_payslip_generation"
+              parent="hospital_employee_payroll"
+              sequence="20"/>
+
+    <menuitem name="Salary Structure"
+              id="hospital_employee_payroll_salary_structure"
+              parent="hospital_employee_payroll"
+              sequence="30"/>
+
+    <menuitem name="Salary Rule"
+              id="hospital_employee_payroll_salary_rule"
+              parent="hospital_employee_payroll"
+              sequence="40"/>
+
+    <menuitem name="salary Details"
+              id="hospital_employee_payroll_salary_details"
+              parent="hospital_employee_payroll"
+              sequence="50"/>
+
+    <menuitem name="Report"
+              id="hospital_employee_payroll_report"
+              parent="hospital_employee_payroll"
+              sequence="60"/>
+
+
+    <menuitem name="Enroll"
+              id="hospital_employee_ee_enroll"
+              parent="hospital_employee_ee"
+              sequence="10"/>
+
+    <menuitem name="Exit"
+              id="hospital_employee_ee_exit"
+              parent="hospital_employee_ee"
+              sequence="20"/>
+
+    <!--Others-->
+    <menuitem name="Awards"
+              id="hospital_employee_others_awards"
+              parent="hospital_employee_others"
+              action="action_employee_awards"
+              sequence="10"/>
+
+    <menuitem name="Course"
+              id="hospital_employee_others_course"
+              parent="hospital_employee_others"
+              action="action_employee_course"
+              sequence="20"/>
+
+    <menuitem name="Experience"
+              id="hospital_employee_others_experience"
+              parent="hospital_employee_others"
+              action="action_employee_experience"
+              sequence="30"/>
+
+    <menuitem name="Education"
+              id="hospital_employee_others_education"
+              parent="hospital_employee_others"
+              action="action_employee_education"
+              sequence="40"/>
+
+
+</odoo>

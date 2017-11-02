@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Form View-->
+    <record model="ir.ui.view" id="view_employee_experience_form">
+        <field name="name">employee.experience.form</field>
+        <field name="model">employee.experience</field>
+        <field name="arch" type="xml">
+            <form string="Experience">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="duration"/>
+                        <field name="position"/>
+                        <field name="leaving_reason"/>
+                    </group>
+                <field name="comment" placeholder="Comment"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--tree view-->
+    <record model="ir.ui.view" id="view_employee_experience_tree">
+    <field name="name">employee.experience.tree</field>
+    <field name="model">employee.experience</field>
+    <field name="arch" type="xml">
+        <tree string="Experience" editable="top">
+            <field name="name"/>
+            <field name="duration"/>
+            <field name="position"/>
+            <field name="leaving_reason"/>
+        </tree>
+    </field>
+    </record>
+
+
+    <!--action-->
+    <record model="ir.actions.act_window" id="action_employee_experience">
+        <field name="name">Experience</field>
+        <field name="res_model">employee.experience</field>
+        <field name="view_type">form</field>
+        <field name="limit">20</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

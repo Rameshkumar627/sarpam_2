@@ -58,6 +58,12 @@ Page: Employee:-
     5.1 Enroll
     5.2 Exit
 
+6. Others--------------------------->Completed
+    6.1 Awards
+    6.2 Course
+    6.3 Experience-------------------NEED VIEW
+    6.4 Education
+
 
 Page: Hospital:-
 1. Contact
@@ -83,6 +89,14 @@ Page: Hospital:-
     6.2 Expense
 
 8. Billing
+
+9. Others--------------------------->Completed
+    9.1 Relations
+    9.2 Employee Type
+    9.3 Bank
+    9.4 Blood Group
+    9.5 State
+    9.6 Country
 
 
 Page: Store:-

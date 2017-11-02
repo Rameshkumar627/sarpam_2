@@ -1,14 +1,6 @@
 Employee:
 
 
-1. employee.employee
-2. employee.education
-3. employee.awards
-4. employee.course
-5. employee.education
-6. employee.type
-
-
 Time Schedule
 1. employee.time.schedule
 2. employee.time.schedule.line

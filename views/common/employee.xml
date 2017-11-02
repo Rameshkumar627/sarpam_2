@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="view_employee_employee_form">
+        <field name="name">employee.employee.form</field>
+        <field name="model">employee.employee</field>
+        <field name="arch" type="xml">
+            <form string="Employee">
+                <header>
+                    <field name="status" widget="statusbar"/>
+                </header>
+                <sheet>
+
+                    <separator string="Employee Database" style="text-align:center;"/>
+
+                    <field name="id" invisible="1"/>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-check">
+                                <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;active&quot;}"/>
+                            </button>
+                        </div>
+                        <field name="image" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;image_medium&quot;}"/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1><field name="name" required="1"/></h1>
+                            <field name="employee_uid" invisible="1"/>
+                            <label for="employee_uid" class="oe_edit_only"/>
+                            <h2><field name="employee_uid"/></h2>
+                        </div>
+
+                    <!--Notebook Pages-->
+                    <notebook>
+                        <page string="Official Information">
+                            <group col="4">
+                                <field name="date_of_join"/>
+                                <field name="employee_type_id"/>
+                                <field name="date_of_exit"/>
+                                <field name="position"/>
+                                <field name="msg"/>
+                                <field name="source_id"/>
+                                <field name="direct_reportee_id"/>
+                                <field name="phone_primary"/>
+                                <field name="subordinate_ids" widget="many2many_tags"/>
+                                <field name="email"/>
+                            </group>
+                        </page>
+
+                        <page string="Personal Information">
+                            <group col="4">
+                                <field name="date_of_birth"/>
+                                <field name="age"/>
+                                <field name="sex"/>
+                                <field name="marital_status"/>
+                                <field name="phone_secondary"/>
+                                <field name="pan"/>
+                                <field name="aadhar_card"/>
+                                <field name="bank_name"/>
+                                <field name="account_no"/>
+                                <field name="blood_group"/>
+                                <field name="allergic_towards"/>
+                                <field name="emergency_contact"/>
+                            </group>
+
+                            <field name="contact_address"/>
+                        </page>
+
+                        <page string="Educational Information">
+                            <field name="education"/>
+                            <field name="experience"/>
+                            <field name="awards"/>
+                        </page>
+
+                        <page string="HR Information">
+                            <group col="4">
+                                <field name="permission_approvar_id"/>
+                                <field name="leave_approvar_id"/>
+                                <field name="overtime_approvar_id"/>
+                            </group>
+                        </page>
+
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--tree view-->
+    <record model="ir.ui.view" id="view_employee_employee_tree">
+    <field name="name">employee.employee.tree</field>
+    <field name="model">employee.employee</field>
+    <field name="arch" type="xml">
+        <tree string="Employee">
+            <field name="position"/>
+            <field name="name"/>
+            <field name="employee_uid"/>
+            <field name="employee_type_id"/>
+            <field name="date_of_join"/>
+            <field name="date_of_exit"/>
+            <field name="phone_primary"/>
+            <field name="phone_secondary"/>
+            <field name="email"/>
+            <field name="pan"/>
+        </tree>
+    </field>
+    </record>
+
+    <!--search view-->
+    <record model="ir.ui.view" id="view_employee_employee_search">
+    <field name="name">employee.employee.tree</field>
+    <field name="model">employee.employee</field>
+    <field name="arch" type="xml">
+        <search string="Employee">
+            <field name="name"/>
+            <field name="employee_uid"/>
+            <field name="position"/>
+            <filter string="Employee Type" context="{'group_by':'employee_type'}"/>
+            <filter string="Title" context="{'group_by':'title'}"/>
+            <filter string="Position" context="{'group_by':'position'}"/>
+        </search>
+    </field>
+    </record>
+
+    <!--action-->
+    <record model="ir.actions.act_window" id="action_employee_employee_doctor">
+        <field name="name">Employee</field>
+        <field name="res_model">employee.employee</field>
+        <field name="view_type">form</field>
+        <field name="limit">20</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('employee_type_id.name','=','Doctor')]</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_employee_employee_nurse">
+        <field name="name">Employee</field>
+        <field name="res_model">employee.employee</field>
+        <field name="view_type">form</field>
+        <field name="limit">20</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('employee_type_id.name','=','Nurse')]</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_employee_employee_contract">
+        <field name="name">Employee</field>
+        <field name="res_model">employee.employee</field>
+        <field name="view_type">form</field>
+        <field name="limit">20</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('employee_type_id.name','=','Contract')]</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_employee_employee_others">
+        <field name="name">Employee</field>
+        <field name="res_model">employee.employee</field>
+        <field name="view_type">form</field>
+        <field name="limit">20</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('employee_type_id.name','=','Others')]</field>
+    </record>
+
+
+</odoo>
+

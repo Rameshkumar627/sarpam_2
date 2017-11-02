@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Form View-->
+    <record model="ir.ui.view" id="view_employee_course_form">
+        <field name="name">employee.course.form</field>
+        <field name="model">employee.course</field>
+        <field name="arch" type="xml">
+            <form string="Course">
+                <group>
+                    <field name="name"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+
+    <!--tree view-->
+    <record model="ir.ui.view" id="view_employee_course_tree">
+    <field name="name">employee.course.tree</field>
+    <field name="model">employee.course</field>
+    <field name="arch" type="xml">
+        <tree string="Course" editable="top">
+            <field name="name"/>
+        </tree>
+    </field>
+    </record>
+
+
+    <!--action-->
+    <record model="ir.actions.act_window" id="action_employee_course">
+        <field name="name">Course</field>
+        <field name="res_model">employee.course</field>
+        <field name="view_type">form</field>
+        <field name="limit">20</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

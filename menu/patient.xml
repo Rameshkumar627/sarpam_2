@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Patient-->
+    <menuitem name="Appointment" 
+              id="hospital_out_patient_appointment"
+              parent="hospital_out_patient"
+              action="action_opt_appointment"
+              sequence="10"/>
+
+    <menuitem name="OPT"
+              id="hospital_out_patient_opt"
+              parent="hospital_out_patient"
+              sequence="20"/>
+
+    <menuitem name="Billing"
+              id="hospital_out_patient_billing"
+              parent="hospital_out_patient"
+              sequence="30"/>
+
+    <menuitem name="Report"
+              id="hospital_out_patient_report"
+              parent="hospital_out_patient"
+              sequence="40"/>
+
+    <menuitem name="Ambulance"
+              id="hospital_in_patient_ambulance"
+              parent="hospital_in_patient"
+              sequence="10"/>
+
+    <menuitem name="Admission"
+              id="hospital_in_patient_admission"
+              parent="hospital_in_patient"
+              sequence="20"/>
+
+    <menuitem name="IPT"
+              id="hospital_in_patient_ipt"
+              parent="hospital_in_patient"
+              sequence="30"/>
+
+    <menuitem name="Treatment"
+              id="hospital_in_patient_treatment"
+              parent="hospital_in_patient"
+              sequence="40"/>
+
+    <menuitem name="Operation Theater"
+              id="hospital_in_patient_ot"
+              parent="hospital_in_patient"
+              sequence="50"/>
+
+    <menuitem name="Billing"
+              id="hospital_in_patient_billing"
+              parent="hospital_in_patient"
+              sequence="60"/>
+
+    <menuitem name="Discharge"
+              id="hospital_in_patient_discharge"
+              parent="hospital_in_patient"
+              sequence="70"/>
+
+    <menuitem name="Report"
+              id="hospital_in_patient_report"
+              parent="hospital_in_patient"
+              sequence="80"/>
+
+    <menuitem name="Patient Details"
+              id="hospital_patient_contact"
+              parent="menu_patient"
+              action="action_patient_patient"
+              sequence="30"/>
+
+
+</odoo>

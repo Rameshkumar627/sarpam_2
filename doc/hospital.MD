@@ -5,11 +5,10 @@ Hospital:
 2. hospital.voucher.detail
 3. hospital.expense
 4. hospital.expense.detail
-5. hospital.equipment
-6. hospital.equipment.service
-7. hospital.equipment.notification
-8. hospital.equipment.todos
-9. hospital.equipment.others
+5. hospital.assert
+6. assert.service
+7. assert.notification
+8. assert.todos
 10. hospital.ward
 11. hospital.department
 12. hospital.org----Transient Model

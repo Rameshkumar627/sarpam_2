@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!--Hospital-->
+    <menuitem name="Patient"
+              id="hospital_contact_patient"
+              parent="hospital_contact"
+              sequence="10"/>
+
+    <menuitem name="Doctor"
+              id="hospital_contact_doctor"
+              parent="hospital_contact"
+              sequence="10"/>
+
+    <menuitem name="Nurse"
+              id="hospital_contact_nurse"
+              parent="hospital_contact"
+              sequence="20"/>
+
+    <menuitem name="Contract"
+              id="hospital_contact_contract"
+              parent="hospital_contact"
+              sequence="30"/>
+
+    <menuitem name="Others"
+              id="hospital_contact_others"
+              parent="hospital_contact"
+              sequence="40"/>
+
+    <menuitem name="Equipement"
+              id="hospital_maintenance_equipement"
+              parent="hospital_maintenance"
+              sequence="10"/>
+
+    <menuitem name="Others"
+              id="hospital_maintenance_others"
+              parent="hospital_maintenance"
+              sequence="20"/>
+
+    <menuitem name="Notification"
+              id="hospital_maintenance_notification"
+              parent="hospital_maintenance"
+              sequence="30"/>
+
+    <menuitem name="Todo's"
+              id="hospital_maintenance_todos"
+              parent="hospital_maintenance"
+              sequence="40"/>
+
+    <menuitem name="Voucher"
+              id="hospital_payment_voucher"
+              parent="hospital_payment"
+              sequence="10"/>
+
+    <menuitem name="Expense"
+              id="hospital_payment_expense"
+              parent="hospital_payment"
+              sequence="20"/>
+
+    <!--Others-->
+    <menuitem name="Relations"
+              id="hospital_others_relations"
+              parent="hospital_others"
+              action="action_human_contact"
+              sequence="10"/>
+
+    <menuitem name="Employee Type"
+              id="hospital_others_employee_type"
+              parent="hospital_others"
+              action="action_employee_type"
+              sequence="20"/>
+
+    <menuitem name="Bank"
+              id="hospital_others_bank"
+              parent="hospital_others"
+              action="action_account_bank"
+              sequence="30"/>
+
+    <menuitem name="Blood Group"
+              id="hospital_others_blood_group"
+              parent="hospital_others"
+              action="action_blood_group"
+              sequence="40"/>
+
+    <menuitem name="State"
+              id="hospital_others_state"
+              parent="hospital_others"
+              action="action_human_state"
+              sequence="50"/>
+
+    <menuitem name="Country"
+              id="hospital_others_country"
+              parent="hospital_others"
+              action="action_human_country"
+              sequence="60"/>
+
+
+
+</odoo>
