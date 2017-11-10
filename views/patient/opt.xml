@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="view_opt_form_form">
+        <field name="name">opt.form.form</field>
+        <field name="model">opt.form</field>
+        <field name="arch" type="xml">
+            <form string="OPT">
+                <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                <sheet>
+                    <separator string="OPT" style="text-align:center;"/>
+                    <h1><field name="sequence" readonly="1"/></h1>
+                    <group col="4">
+                        <field name="date"/>
+                        <field name="patient_id"/>
+                        <field name="patient_uid"/>
+                        <field name="patient_contact"/>
+                    </group>
+                    <notebook>
+                        <page string="Symptoms/Diagnosis">
+                            <group>
+                                <field name="symptoms_ids" widget="many2many_tags"/>
+                                <field name="diagnosis_ids" widget="many2many_tags"/>
+                            </group>
+                        </page>
+                        <page string="Laboratory">
+                            <group>
+                                <field name="scan_ids" widget="many2many_tags"/>
+                                <field name="test_ids" widget="many2many_tags"/>
+                            </group>
+                        </page>
+                        <page string="Attachments">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="files" filename="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Medicine">
+                            <field name="medicine_ids">
+                                <tree>
+                                    <field name="medicine_lines"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Report">
+                            <field name="report"/>
+                        </page>
+                    </notebook>
+                    <field name="comment" placeholder="Comment"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--tree view-->
+    <record model="ir.ui.view" id="view_opt_form_tree">
+    <field name="name">opt.form.tree</field>
+    <field name="model">opt.form</field>
+    <field name="arch" type="xml">
+        <tree string="OPT">
+            <field name="date"/>
+            <field name="patient_id"/>
+            <field name="patient_uid"/>
+            <field name="state"/>
+        </tree>
+    </field>
+    </record>
+
+
+    <!--action-->
+    <record model="ir.actions.act_window" id="action_opt_form">
+        <field name="name">OPT</field>
+        <field name="res_model">opt.form</field>
+        <field name="view_type">form</field>
+        <field name="limit">80</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

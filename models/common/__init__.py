@@ -3,6 +3,8 @@
 from . import message
 
 from . import patient
+from . import department
+from . import ward
 from . import employee
 from . import employee_info
 from . import general_info

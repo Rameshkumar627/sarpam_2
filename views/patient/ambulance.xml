@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="view_ipt_ambulance_form">
+        <field name="name">ipt.ambulance.form</field>
+        <field name="model">ipt.ambulance</field>
+        <field name="arch" type="xml">
+            <form string="Ambulance">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <separator string="Ambulance" style="text-align:center;"/>
+                    <h1><field name="sequence" readonly="1"/></h1>
+                    <group col="4">
+                        <field name="date"/>
+                        <field name="patient_id"/>
+                        <field name="patient_uid"/>
+                        <field name="patient_type"/>
+                        <field name="reason"/>
+                    </group>
+                    <notebook>
+                        <page string="Attachment">
+                            <field name="attachment_ids">
+                                <tree>
+                                    <field name="files" filename="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Contact">
+                            <group col="4">
+                                <field name="relatives_id"/>
+                                <field name="relatives_contact"/>
+                                <field name="patient_contact"/>
+                            </group>
+                        </page>
+                        <page string="Service Info">
+                            <group col="4">
+                                <field name="from_place"/>
+                                <field name="till_place"/>
+                                <field name="distance"/>
+                                <field name="driver_id"/>
+                                <field name="driver_contact"/>
+                                <field name="staff_ids" widget="many2many_tags"/>
+                            </group>
+                        </page>
+                    </notebook>
+                    <field name="comment" placeholder="Comment"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--tree view-->
+    <record model="ir.ui.view" id="view_ipt_ambulance_tree">
+    <field name="name">ipt.ambulance.tree</field>
+    <field name="model">ipt.ambulance</field>
+    <field name="arch" type="xml">
+        <tree string="Ambulance">
+            <field name="date"/>
+            <field name="patient_id"/>
+            <field name="patient_uid"/>
+            <field name="patient_type"/>
+            <field name="reason"/>
+            <field name="state"/>
+        </tree>
+    </field>
+    </record>
+
+
+    <!--action-->
+    <record model="ir.actions.act_window" id="action_ipt_ambulance">
+        <field name="name">Ambulance</field>
+        <field name="res_model">ipt.ambulance</field>
+        <field name="view_type">form</field>
+        <field name="limit">80</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

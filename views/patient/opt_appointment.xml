@@ -15,7 +15,7 @@
                         <field name="patient_id"/>
                         <field name="patient_uid"/>
                         <field name="staff"/>
-                        <field name="reason"/>
+                        <field name="reason" widget="many2many_tags"/>
                     </group>
                     <field name="reason" placeholder="Comment"/>
                 </sheet>

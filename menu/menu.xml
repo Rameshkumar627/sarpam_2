@@ -15,7 +15,6 @@
     <menuitem name="Patient" id="menu_patient" sequence="10"/>
     <menuitem name="Out-Patient" id="hospital_out_patient" parent="menu_patient" sequence="10"/>
     <menuitem name="In-Patient" id="hospital_in_patient" parent="menu_patient" sequence="20"/>
-    <menuitem name="Medicine" id="hospital_patient_medicine" parent="menu_patient" sequence="40"/>
 
 
     <!--Employee-->

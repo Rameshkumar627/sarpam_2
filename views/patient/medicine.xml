@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="view_patient_medicine_form">
+        <field name="name">patient.medicine.form</field>
+        <field name="model">patient.medicine</field>
+        <field name="arch" type="xml">
+            <form string="Medicine">
+                <sheet>
+                    <separator string="Medicine" style="text-align:center;"/>
+                    <h1><field name="sequence" readonly="1"/></h1>
+                    <group col="4">
+                        <field name="date"/>
+                        <field name="patient_id"/>
+                        <field name="patient_uid"/>
+                        <field name="patient_contact"/>
+                    </group>
+                    <notebook>
+                        <page string="Medicine">
+                            <field name="medicine_lines">
+                                <tree>
+                                    <field name="medicine"/>
+                                    <field name="fore_noon"/>
+                                    <field name="noon"/>
+                                    <field name="after_noon"/>
+                                    <field name="days"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <field name="comment" placeholder="Comment"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--tree view-->
+    <record model="ir.ui.view" id="view_patient_medicine_tree">
+    <field name="name">patient.medicine.tree</field>
+    <field name="model">patient.medicine</field>
+    <field name="arch" type="xml">
+        <tree string="Medicine">
+            <field name="date"/>
+            <field name="patient_id"/>
+            <field name="patient_uid"/>
+            <field name="patient_contact"/>
+        </tree>
+    </field>
+    </record>
+
+
+    <!--action-->
+    <record model="ir.actions.act_window" id="action_patient_medicine">
+        <field name="name">Medicine</field>
+        <field name="res_model">patient.medicine</field>
+        <field name="view_type">form</field>
+        <field name="limit">80</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

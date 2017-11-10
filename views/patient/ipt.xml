@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="view_ipt_form_form">
+        <field name="name">ipt.form.form</field>
+        <field name="model">ipt.form</field>
+        <field name="arch" type="xml">
+            <form string="IPT">
+                <sheet>
+                    <separator string="IPT" style="text-align:center;"/>
+                    <group col="4">
+                        <field name="date"/>
+                        <field name="patient_id"/>
+                        <field name="patient_uid"/>
+                        <field name="patient_type"/>
+                        <field name="reason"/>
+                    </group>
+                    <notebook>
+                        <page string="Contact">
+                            <group col="4">
+                                <field name="patient_contact"/>
+                                <field name="relatives_id"/>
+                                <field name="relatives_contact"/>
+                            </group>
+                        </page>
+                        <page string="Treatment">
+                            <field name="treatment_ids"/>
+                        </page>
+                        <page string="Doctor Visit">
+                            <field name="doctor_visit_ids"/>
+                        </page>
+                        <page string="Remainder">
+                            <field name="reminder_ids"/>
+                        </page>
+                        <page string="Hospitality">
+                            <field name="hospitality_ids"/>
+                        </page>
+                        <page string="Remainder">
+                            <field name="medicine_ids"/>
+                        </page>
+                        <page string="Report">
+                            <field name="report"/>
+                        </page>
+                    </notebook>
+                    <field name="comment" placeholder="comment"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--tree view-->
+    <record model="ir.ui.view" id="view_ipt_form_tree">
+    <field name="name">ipt.form.tree</field>
+    <field name="model">ipt.form</field>
+    <field name="arch" type="xml">
+        <tree string="IPT">
+            <field name="date"/>
+            <field name="patient_id"/>
+            <field name="patient_uid"/>
+            <field name="patient_type"/>
+            <field name="reason"/>
+        </tree>
+    </field>
+    </record>
+
+
+    <!--action-->
+    <record model="ir.actions.act_window" id="action_ipt_form">
+        <field name="name">IPT</field>
+        <field name="res_model">ipt.form</field>
+        <field name="view_type">form</field>
+        <field name="limit">80</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

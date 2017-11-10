@@ -11,6 +11,7 @@
     <menuitem name="OPT"
               id="hospital_out_patient_opt"
               parent="hospital_out_patient"
+              action="action_opt_form"
               sequence="20"/>
 
     <menuitem name="Billing"
@@ -26,16 +27,19 @@
     <menuitem name="Ambulance"
               id="hospital_in_patient_ambulance"
               parent="hospital_in_patient"
+              action="action_ipt_ambulance"
               sequence="10"/>
 
     <menuitem name="Admission"
               id="hospital_in_patient_admission"
               parent="hospital_in_patient"
+              action="action_ipt_admission"
               sequence="20"/>
 
     <menuitem name="IPT"
               id="hospital_in_patient_ipt"
               parent="hospital_in_patient"
+              action="action_ipt_form"
               sequence="30"/>
 
     <menuitem name="Treatment"
@@ -43,25 +47,67 @@
               parent="hospital_in_patient"
               sequence="40"/>
 
+    <menuitem name="Oxygen-Cylinder"
+              id="hospital_in_patient_treatment_oxygen_cylinder"
+              parent="hospital_in_patient_treatment"
+              action="action_ipt_treatment_oxygen_cylinder"
+              sequence="10"/>
+
+    <menuitem name="Drips Sheet"
+              id="hospital_in_patient_treatment_drips_sheet"
+              parent="hospital_in_patient_treatment"
+              action="action_ipt_treatment_drips_sheet"
+              sequence="20"/>
+
+    <menuitem name="Others"
+              id="hospital_in_patient_treatment_others"
+              parent="hospital_in_patient_treatment"
+              action="action_ipt_treatment_others"
+              sequence="30"/>
+
+    <menuitem name="Doctor Visit"
+              id="hospital_in_patient_doctor_visit"
+              parent="hospital_in_patient"
+              action="action_ipt_doctor_visit"
+              sequence="50"/>
+
+    <menuitem name="Remainder"
+              id="hospital_in_patient_remainder"
+              parent="hospital_in_patient"
+              action="action_ipt_remainder"
+              sequence="60"/>
+
+    <menuitem name="Hospitality"
+              id="hospital_in_patient_hospitality"
+              parent="hospital_in_patient"
+              action="action_ipt_hospitality"
+              sequence="70"/>
+
     <menuitem name="Operation Theater"
               id="hospital_in_patient_ot"
               parent="hospital_in_patient"
-              sequence="50"/>
+              sequence="80"/>
 
     <menuitem name="Billing"
               id="hospital_in_patient_billing"
               parent="hospital_in_patient"
-              sequence="60"/>
+              sequence="90"/>
+
+    <menuitem name="Deceased"
+              id="hospital_in_patient_deceased"
+              parent="hospital_in_patient"
+              action="action_ipt_ambulance"
+              sequence="100"/>
 
     <menuitem name="Discharge"
               id="hospital_in_patient_discharge"
               parent="hospital_in_patient"
-              sequence="70"/>
+              sequence="110"/>
 
     <menuitem name="Report"
               id="hospital_in_patient_report"
               parent="hospital_in_patient"
-              sequence="80"/>
+              sequence="120"/>
 
     <menuitem name="Patient Details"
               id="hospital_patient_contact"
@@ -69,5 +115,9 @@
               action="action_patient_patient"
               sequence="30"/>
 
-
+    <menuitem name="Medicine"
+              id="hospital_patient_medicine"
+              parent="menu_patient"
+              action="action_patient_medicine"
+              sequence="40"/>
 </odoo>

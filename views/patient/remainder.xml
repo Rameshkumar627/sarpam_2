@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="view_ipt_remainder_form">
+        <field name="name">ipt.remainder.form</field>
+        <field name="model">ipt.remainder</field>
+        <field name="arch" type="xml">
+            <form string="Remainder">
+                <sheet>
+                    <separator string="Remainder" style="text-align:center;"/>
+                    <group col="4">
+                        <field name="date"/>
+                    </group>
+                    <field name="comment" placeholder="comment"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--tree view-->
+    <record model="ir.ui.view" id="view_ipt_remainder_tree">
+    <field name="name">ipt.remainder.tree</field>
+    <field name="model">ipt.remainder</field>
+    <field name="arch" type="xml">
+        <tree string="Remainder">
+            <field name="date"/>
+        </tree>
+    </field>
+    </record>
+
+
+    <!--action-->
+    <record model="ir.actions.act_window" id="action_ipt_remainder">
+        <field name="name">Remainder</field>
+        <field name="res_model">ipt.remainder</field>
+        <field name="view_type">form</field>
+        <field name="limit">80</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

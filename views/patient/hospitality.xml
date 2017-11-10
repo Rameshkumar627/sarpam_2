@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="view_ipt_hospitality_form">
+        <field name="name">ipt.hospitality.form</field>
+        <field name="model">ipt.hospitality</field>
+        <field name="arch" type="xml">
+            <form string="Hospitality">
+                <sheet>
+                    <separator string="Hospitality" style="text-align:center;"/>
+                    <group col="4">
+                        <field name="from_time"/>
+                        <field name="till_time"/>
+                        <field name="total_hours"/>
+                        <field name="bed_id"/>
+                    </group>
+                    <field name="comment" placeholder="comment"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--tree view-->
+    <record model="ir.ui.view" id="view_ipt_hospitality_tree">
+    <field name="name">ipt.hospitality.tree</field>
+    <field name="model">ipt.hospitality</field>
+    <field name="arch" type="xml">
+        <tree string="Hospitality">
+            <field name="from_time"/>
+            <field name="till_time"/>
+            <field name="total_hours"/>
+            <field name="bed_id"/>
+        </tree>
+    </field>
+    </record>
+
+
+    <!--action-->
+    <record model="ir.actions.act_window" id="action_ipt_hospitality">
+        <field name="name">Hospitality</field>
+        <field name="res_model">ipt.hospitality</field>
+        <field name="view_type">form</field>
+        <field name="limit">80</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

@@ -77,9 +77,12 @@ Page: Hospital:-
 3. Department
 4. Ward
 5. Operation Theater
+    5.1 Booking
+    5.2 Operation completed
+    5.3 OT Procedure
 
 6. Maintenance
-    5.1 Equipement
+    5.1 Equipment
     5.2 Others
     5.3 Notification
     5.4 Todos

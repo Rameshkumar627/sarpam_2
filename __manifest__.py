@@ -12,7 +12,17 @@
         'menu/menu.xml',
 
         'views/common/patient.xml',
-        'views/patient/appointment.xml',
+        'views/patient/opt_appointment.xml',
+        'views/patient/opt.xml',
+        'views/patient/ipt.xml',
+        'views/patient/ambulance.xml',
+        'views/patient/admission.xml',
+        'views/patient/treatment.xml',
+        'views/patient/doctor_visit.xml',
+        'views/patient/remainder.xml',
+        'views/patient/hospitality.xml',
+        'views/patient/deceased.xml',
+        'views/patient/medicine.xml',
         'menu/patient.xml',
 
         'views/common/employee.xml',

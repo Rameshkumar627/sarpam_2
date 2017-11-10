@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--form view-->
+    <record model="ir.ui.view" id="view_ipt_treatment_form">
+        <field name="name">ipt.treatment.form</field>
+        <field name="model">ipt.treatment</field>
+        <field name="arch" type="xml">
+            <form string="Treatment">
+                <sheet>
+                    <separator string="Treatment" style="text-align:center;"/>
+                    <group col="4">
+                        <field name="from_time"/>
+                        <field name="till_time"/>
+                        <field name="total_hours"/>
+                        <field name="treatment_id"/>
+                    </group>
+                    <field name="comment" placeholder="comment"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--tree view-->
+    <record model="ir.ui.view" id="view_ipt_treatment_tree">
+    <field name="name">ipt.treatment.tree</field>
+    <field name="model">ipt.treatment</field>
+    <field name="arch" type="xml">
+        <tree string="Treatment">
+            <field name="from_time"/>
+            <field name="till_time"/>
+            <field name="total_hours"/>
+            <field name="treatment_id"/>
+        </tree>
+    </field>
+    </record>
+
+
+    <!--action-->
+    <record model="ir.actions.act_window" id="action_ipt_treatment_oxygen_cylinder">
+        <field name="name">Oxygen Cylinder</field>
+        <field name="res_model">ipt.treatment</field>
+        <field name="view_type">form</field>
+        <field name="limit">80</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('treatment_id.treatment', '=', 'Oxygen Cylinder')]</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_ipt_treatment_drips_sheet">
+        <field name="name">Drips Sheet</field>
+        <field name="res_model">ipt.treatment</field>
+        <field name="view_type">form</field>
+        <field name="limit">80</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('treatment_id.treatment', '=', 'Drips')]</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_ipt_treatment_others">
+        <field name="name">Others</field>
+        <field name="res_model">ipt.treatment</field>
+        <field name="view_type">form</field>
+        <field name="limit">80</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('treatment_id.treatment', 'not in', ['Drips', 'Oxygen Cylinder'])]</field>
+    </record>
+
+</odoo>

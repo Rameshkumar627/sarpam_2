@@ -68,7 +68,7 @@
         <field name="name">Patient</field>
         <field name="res_model">patient.patient</field>
         <field name="view_type">form</field>
-        <field name="limit">20</field>
+        <field name="limit">80</field>
         <field name="view_mode">tree,form</field>
     </record>
 

@@ -12,7 +12,7 @@ class Appointment(models.Model):
     patient_id = fields.Many2one(comodel_name='patient.patient', string='patient', required=True)
     patient_uid = fields.Char(string='ID')
     staff = fields.Many2one(comodel_name='employee.employee', string='Doctor/ Staff')
-    reason = fields.Text(string='Reason', required=True)
+    reason = fields.Many2one(comodel_name='patient.opt.reason', string='Reason', required=True)
     comment = fields.Text(string='Comment')
 
     @api.multi
